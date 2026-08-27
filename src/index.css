@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Prevent flash of invisible text while Google Fonts load */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: local('Inter');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: local('JetBrains Mono');
+}
+
 @layer base {
   :root {
     --background: 222 47% 5%;
