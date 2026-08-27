@@ -125,10 +125,10 @@ export default function Admin() {
         <div className="grid lg:grid-cols-2 gap-6">
           {/* Verdict breakdown */}
           <div className="glass rounded-2xl p-6 space-y-4">
-            <h2 className="text-sm font-semibold text-foreground flex items-center gap-2">
+            <h3 className="text-sm font-semibold text-foreground flex items-center gap-2">
               <BarChart3 className="w-4 h-4 text-primary" />
               Verdict Distribution
-            </h2>
+            </h3>
             <div className="space-y-3">
               {(["ai", "mixed", "uncertain", "human"] as Verdict[]).map(v => {
                 const count = stats.byVerdict[v] || 0;
@@ -154,10 +154,10 @@ export default function Admin() {
 
           {/* Content type breakdown */}
           <div className="glass rounded-2xl p-6 space-y-4">
-            <h2 className="text-sm font-semibold text-foreground flex items-center gap-2">
+            <h3 className="text-sm font-semibold text-foreground flex items-center gap-2">
               <FileText className="w-4 h-4 text-primary" />
               Content Type Usage
-            </h2>
+            </h3>
             <div className="space-y-3">
               {(["text", "image", "document"] as const).map(type => {
                 const count = stats.byType[type] || 0;
@@ -185,10 +185,10 @@ export default function Admin() {
 
         {/* Recent analyses table */}
         <div className="glass rounded-2xl p-6 space-y-4">
-          <h2 className="text-sm font-semibold text-foreground flex items-center gap-2">
+          <h3 className="text-sm font-semibold text-foreground flex items-center gap-2">
             <Clock className="w-4 h-4 text-primary" />
             Recent Analyses
-          </h2>
+          </h3>
           <div className="overflow-x-auto">
             <table className="w-full text-xs">
               <thead>

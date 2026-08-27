@@ -1,4 +1,3 @@
-import heroBg from "@/assets/hero-bg.jpg";
 import { Cpu, Activity, Layers } from "lucide-react";
 
 const STATS = [
@@ -12,7 +11,7 @@ export default function HeroSection() {
     <div className="relative overflow-hidden rounded-2xl mb-8">
       {/* Background */}
       <div className="absolute inset-0">
-        <img src={heroBg} alt="AI Scanner" className="w-full h-full object-cover opacity-40" />
+        <div className="w-full h-full bg-gradient-to-br from-cyan-950/60 via-violet-950/40 to-background" />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
       </div>
